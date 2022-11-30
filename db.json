@@ -2,7 +2,7 @@
   "company": [
     {
       "id": 1,
-      "name": "NT Infotech55555555",
+      "name": "NT Infotech",
       "empcount": "5500",
       "revenue": "250",
       "address": "1st street\nchennai\npin 600048",
@@ -81,6 +81,36 @@
       "category": "Programmer",
       "isactive": true,
       "id": 10
+    },
+    {
+      "gmail": "ttttttt",
+      "personalNumber": "23234",
+      "name": "32423",
+      "lastName": "34234",
+      "dateOfBirth": "324",
+      "category": "34234",
+      "isactive": true,
+      "id": 11
+    },
+    {
+      "gmail": "qweqwewqe",
+      "personalNumber": "wqhuihi",
+      "name": "uh",
+      "lastName": "uih",
+      "dateOfBirth": "iu",
+      "category": "hui",
+      "isactive": true,
+      "id": 12
+    },
+    {
+      "gmail": "uyuyiu",
+      "personalNumber": "yuiui",
+      "name": "yiu",
+      "lastName": "hui",
+      "dateOfBirth": "h",
+      "category": "wer",
+      "isactive": true,
+      "id": 13
     }
   ]
 }
