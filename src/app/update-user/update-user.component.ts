@@ -25,8 +25,9 @@ export class UpdateUserComponent implements OnInit {
         console.log(response)
         this.formDefaultData = response;
         this.companyform.setValue({
-          id: this.formDefaultData.id, name: this.formDefaultData.name, empcount: this.formDefaultData.empcount,
-          revenue: this.formDefaultData.revenue, address: this.formDefaultData.address, isactive: this.formDefaultData.isactive
+          id: this.formDefaultData.id, gmail: this.formDefaultData.gmail, personalNumber: this.formDefaultData.personalNumber,name: this.formDefaultData.name,
+          lastName: this.formDefaultData.lastName,dateOfBirth: this.formDefaultData.dateOfBirth,
+          category: this.formDefaultData.category, isactive: this.formDefaultData.isactive
         });
       })
     })
@@ -34,10 +35,12 @@ export class UpdateUserComponent implements OnInit {
 
   companyform = this.builder.group({
     id: this.builder.control({ value: '', disabled: true }),
+    gmail: this.builder.control('', Validators.required),
+    personalNumber: this.builder.control('', Validators.required),
     name: this.builder.control('', Validators.required),
-    empcount: this.builder.control('', Validators.required),
-    revenue: this.builder.control('', Validators.required),
-    address: this.builder.control('', Validators.required),
+    lastName: this.builder.control('', Validators.required),
+    dateOfBirth: this.builder.control('', Validators.required),
+    category: this.builder.control('', Validators.required),
     isactive: this.builder.control(true),
   });
 

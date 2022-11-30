@@ -48,7 +48,7 @@ export class AddCompComponent implements OnInit {
       } else {
         this.api.CreateComapny(this.companyform.value).subscribe(response => {
           this.closepopup();
-          this.toastr.success('Saved successfully', 'Toastr fun!');
+          this.toastr.success('Saved successfully');
           this.router.navigate([''])
         });
       }

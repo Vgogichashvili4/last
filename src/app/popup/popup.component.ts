@@ -19,8 +19,9 @@ export class PopupComponent implements OnInit {
       this.api.GetCompanybycode(this.data.id).subscribe(response => {
         this.editdata = response;
         this.companyform.setValue({
-          id: this.editdata.id, name: this.editdata.name, empcount: this.editdata.empcount,
-          revenue: this.editdata.revenue, address: this.editdata.address, isactive: this.editdata.isactive
+          id: this.editdata.id, gmail: this.editdata.gmail, personalNumber: this.editdata.personalNumber,name: this.editdata.name,
+          lastName: this.editdata.lastName,dateOfBirth: this.editdata.dateOfBirth,
+          category: this.editdata.category, isactive: this.editdata.isactive
         });
       });
     }
@@ -28,10 +29,12 @@ export class PopupComponent implements OnInit {
 
   companyform = this.builder.group({
     id: this.builder.control({ value: '', disabled: true }),
+    gmail: this.builder.control('', Validators.required),
+    personalNumber: this.builder.control('', Validators.required),
     name: this.builder.control('', Validators.required),
-    empcount: this.builder.control('', Validators.required),
-    revenue: this.builder.control('', Validators.required),
-    address: this.builder.control('', Validators.required),
+    lastName: this.builder.control('', Validators.required),
+    dateOfBirth: this.builder.control('', Validators.required),
+    category: this.builder.control('', Validators.required),
     isactive: this.builder.control(true),
   });
 
