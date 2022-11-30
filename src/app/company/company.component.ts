@@ -7,6 +7,7 @@ import { ApiService } from '../shared/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-company',
@@ -15,7 +16,7 @@ import { MatSort } from '@angular/material/sort';
 })
 export class CompanyComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, private api: ApiService) { }
+  constructor(private dialog: MatDialog, private api: ApiService,private toastr: ToastrService) { }
   @ViewChild(MatPaginator) _paginator!:MatPaginator;
   // @ViewChild(MatSort) _sort!:MatSort;
   @ViewChild(MatSort) sort!: MatSort; 
@@ -61,15 +62,12 @@ export class CompanyComponent implements OnInit {
   //   this.Openpopup(id);
   // }
   RemoveCompany(id: any) {
-  //   alertify.confirm("Remove Company", "do you want remove this company?", () => {
-  //     this.api.RemoveCompanybycode(id).subscribe(r => {
-  //       this.LoadCompany();
-  //     });
-  //   }, function () {
-
-  //   })
+    this.api.RemoveCompanybycode(id).subscribe(r => {
+      this.toastr.success('Deleted successfully');
+        this.LoadCompany();
+      });
+    }
 
 
-  }
-
+   
 }

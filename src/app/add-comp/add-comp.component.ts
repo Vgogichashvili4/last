@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../shared/api.service';
 // import * as alertify from 'alertifyjs'
 
@@ -18,7 +19,7 @@ export class AddCompComponent implements OnInit {
   id:string ="";
   formDefaultData!:any
   constructor(private builder: FormBuilder, private dialog: MatDialog, private api: ApiService,private activatedRoute:ActivatedRoute,
-    private router:Router) { }
+    private router:Router,private toastr: ToastrService) { }
 
   ngOnInit(): void {
    
@@ -41,13 +42,13 @@ export class AddCompComponent implements OnInit {
       if (Editid != '' && Editid != null) {
         this.api.UpdateComapny(Editid, this.companyform.getRawValue()).subscribe(response => {
           this.router.navigate(['/'])
-          // alertify.success("Updated successfully.")
+          this.toastr.success('Uploaded successfully');
           this.router.navigate([''])
         });
       } else {
         this.api.CreateComapny(this.companyform.value).subscribe(response => {
           this.closepopup();
-          // alertify.success("saved successfully.")
+          this.toastr.success('Saved successfully', 'Toastr fun!');
           this.router.navigate([''])
         });
       }

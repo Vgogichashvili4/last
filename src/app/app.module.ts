@@ -28,6 +28,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr';
+
+
 
 
  
@@ -65,7 +68,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatDialogModule,
     MatInputModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule.forRoot({ positionClass: 'toast-bottom-right',timeOut:2000 }),
     
   ],
   providers: [],
