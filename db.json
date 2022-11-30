@@ -1,0 +1,86 @@
+{
+  "company": [
+    {
+      "id": 1,
+      "name": "NT Infotech55555555",
+      "empcount": "5500",
+      "revenue": "250",
+      "address": "1st street\nchennai\npin 600048",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "name": "NT Infotech pvt ltd",
+      "empcount": "55",
+      "revenue": "25000",
+      "address": "1st street\nchennai\npin 600048",
+      "isactive": false
+    },
+    {
+      "name": "NT Infotech",
+      "empcount": "1000",
+      "revenue": "2000",
+      "address": "test",
+      "isactive": true,
+      "id": 3
+    },
+    {
+      "name": "NT Infotech",
+      "empcount": "1000",
+      "revenue": "2000",
+      "address": "test",
+      "isactive": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "NT Infotech",
+      "empcount": "1000",
+      "revenue": "2000",
+      "address": "test",
+      "isactive": false
+    },
+    {
+      "id": 6,
+      "name": "NT Infotech",
+      "empcount": "1000",
+      "revenue": "2000",
+      "address": "test",
+      "isactive": true
+    },
+    {
+      "id": 7,
+      "name": "ghh",
+      "empcount": "4234234",
+      "revenue": "345345345",
+      "address": "gjh",
+      "isactive": true
+    },
+    {
+      "name": "hj",
+      "empcount": "343",
+      "revenue": "4343",
+      "address": "43434",
+      "isactive": true,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "valeri",
+      "empcount": "324234",
+      "revenue": "234234",
+      "address": "ertertert",
+      "isactive": false
+    },
+    {
+      "gmail": "nickrivers@gmail.com",
+      "personalNumber": "41778648784",
+      "name": "Nick",
+      "lastName": "Rivers",
+      "dateOfBirth": "19.05.2002",
+      "category": "Programmer",
+      "isactive": true,
+      "id": 10
+    }
+  ]
+}
